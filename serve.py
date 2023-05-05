@@ -9,8 +9,7 @@ app = Flask(__name__)
 def process_json():
     if request.method == 'POST':
         p = subprocess.Popen(['python3', 'stress_cpu.py'])
-        print("stress_cpu run ")
-        return None
+        return "stress run"
     elif request.method == 'GET':
         return socket.gethostname()
     else:
